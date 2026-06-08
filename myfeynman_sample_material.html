@@ -334,6 +334,18 @@
 </div>
 
 <script>
+  window.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      window.parent.postMessage(
+        { type: "myfeynman-embed-scroll", deltaY: e.deltaY },
+        "*"
+      );
+    },
+    { passive: false }
+  );
+
   function switchTab(id) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));

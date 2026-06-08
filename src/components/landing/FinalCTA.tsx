@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { useLeadCapture } from "@/components/modal/LeadCaptureProvider";
 import { useTranslations } from "@/i18n/LocaleProvider";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function FinalCTA() {
-  const { openModal } = useLeadCapture();
   const { t } = useTranslations();
 
   return (
@@ -24,7 +24,10 @@ export function FinalCTA() {
         <Button
           variant="secondary"
           className="mt-8 !bg-white !text-orange-primary hover:!bg-orange-light"
-          onClick={() => openModal("final_cta")}
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick()}
         >
           {t.finalCta.cta}
         </Button>

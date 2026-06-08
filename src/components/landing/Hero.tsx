@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import { PhoneMockup } from "@/components/ui/PhoneMockup";
 import { Button } from "@/components/ui/Button";
-import { useLeadCapture } from "@/components/modal/LeadCaptureProvider";
 import { useTranslations } from "@/i18n/LocaleProvider";
 import { localizedPath } from "@/i18n/config";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function Hero() {
-  const { openModal } = useLeadCapture();
   const { locale, t } = useTranslations();
 
   return (
@@ -27,7 +27,12 @@ export function Hero() {
             {t.hero.subtitle}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
-            <Button onClick={() => openModal("hero_primary")}>
+            <Button
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick()}
+            >
               {t.hero.ctaPrimary}
             </Button>
             <Button

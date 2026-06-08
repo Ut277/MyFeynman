@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "@/i18n/LocaleProvider";
 
 const MOCKUP_SRC = {
-  hero: "/images/whatsapp-marathi-maths2.png",
+  hero: "/images/photo1.png",
   whatsapp: "/images/whatsapp-tamil-biology2.png",
 } as const;
 

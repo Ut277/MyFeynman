@@ -3,19 +3,17 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { useLeadCapture } from "@/components/modal/LeadCaptureProvider";
 import { useTranslations } from "@/i18n/LocaleProvider";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 interface PricingCardProps {
-  source?: string;
   showHeading?: boolean;
 }
 
 export function PricingCard({
-  source = "pricing_section",
   showHeading = true,
 }: PricingCardProps) {
-  const { openModal } = useLeadCapture();
   const { t } = useTranslations();
 
   return (
@@ -32,7 +30,7 @@ export function PricingCard({
       >
         <div className="text-center">
           <p className="font-display text-5xl font-semibold text-navy">
-            ₹3,000
+            ₹2,999
           </p>
           <p className="mt-1 text-sm text-warm-grey">{t.pricing.perMonth}</p>
         </div>
@@ -49,7 +47,13 @@ export function PricingCard({
           ))}
         </ul>
 
-        <Button className="mt-8 w-full" onClick={() => openModal(source)}>
+        <Button
+          className="mt-8 w-full"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick()}
+        >
           {t.pricing.cta}
         </Button>
 
@@ -65,7 +69,7 @@ export function PricingSection() {
   return (
     <section id="pricing" className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <PricingCard source="landing_pricing" />
+        <PricingCard />
       </div>
     </section>
   );

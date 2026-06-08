@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLeadCapture } from "@/components/modal/LeadCaptureProvider";
 import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { useTranslations } from "@/i18n/LocaleProvider";
 import { localizedPath } from "@/i18n/config";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function Header() {
-  const { openModal } = useLeadCapture();
   const { locale, t } = useTranslations();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -45,7 +45,13 @@ export function Header() {
             </Link>
           ))}
           <LanguageSwitcher />
-          <Button onClick={() => openModal("header")} className="!py-2.5 !px-5">
+          <Button
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick()}
+            className="!py-2.5 !px-5"
+          >
             {t.nav.bookTrial}
           </Button>
         </nav>
@@ -83,9 +89,12 @@ export function Header() {
                 </Link>
               ))}
               <Button
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => {
                   setMobileOpen(false);
-                  openModal("header_mobile");
+                  trackWhatsAppClick();
                 }}
                 className="mt-2 w-full"
               >

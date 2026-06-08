@@ -8,6 +8,8 @@ type ButtonVariant = "primary" | "secondary" | "outline";
 type ButtonProps = Omit<HTMLMotionProps<"button">, "ref"> & {
   variant?: ButtonVariant;
   href?: string;
+  target?: string;
+  rel?: string;
 };
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -21,7 +23,16 @@ const variantStyles: Record<ButtonVariant, string> = {
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(
-    { variant = "primary", className = "", children, href, ...props },
+    {
+      variant = "primary",
+      className = "",
+      children,
+      href,
+      target,
+      rel,
+      onClick,
+      ...props
+    },
     ref
   ) {
     const classes = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-primary disabled:opacity-50 ${variantStyles[variant]} ${className}`;
@@ -30,6 +41,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       return (
         <motion.a
           href={href}
+          target={target}
+          rel={rel}
+          onClick={
+            onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined
+          }
           className={classes}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}

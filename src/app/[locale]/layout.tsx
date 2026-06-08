@@ -4,8 +4,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { LocaleHtml } from "@/components/layout/LocaleHtml";
-import { LeadCaptureProvider } from "@/components/modal/LeadCaptureProvider";
-import { LeadCaptureModal } from "@/components/modal/LeadCaptureModal";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -46,13 +44,10 @@ export default function LocaleLayout({
   return (
     <LocaleProvider locale={params.locale} dictionary={dictionary}>
       <LocaleHtml locale={params.locale} />
-      <LeadCaptureProvider>
-        <Header />
-        <main lang={params.locale}>{children}</main>
-        <Footer />
-        <WhatsAppButton />
-        <LeadCaptureModal />
-      </LeadCaptureProvider>
+      <Header />
+      <main lang={params.locale}>{children}</main>
+      <Footer />
+      <WhatsAppButton />
       <GoogleAnalytics />
     </LocaleProvider>
   );

@@ -27,7 +27,7 @@ export default function PricingPage({
     <>
       <section className="bg-orange-light py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-4 md:px-6">
-          <PricingCard source="pricing_page" showHeading />
+          <PricingCard showHeading />
         </div>
       </section>
 

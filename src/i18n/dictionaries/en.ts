@@ -1,12 +1,12 @@
 export const en = {
   meta: {
     title:
-      "MyFeynman — 1:1 Tutoring in Your Language | WhatsApp-Native | ₹3,000/month",
+      "MyFeynman — 1:1 Tutoring in Your Language | WhatsApp-Native | ₹2,999/month",
     description:
-      "Personal 1:1 tutoring from highly trained subject experts, supercharged by AI, for K-12 students. Free demo class with child assessment and detailed report. Daily material on WhatsApp, weekly parent reports.",
+      "Personal 1:1 tutoring from highly trained subject experts, supercharged by AI, for Class 3–8 students. Free demo class with child assessment and detailed report. Daily material on WhatsApp, weekly parent reports.",
     ogTitle: "MyFeynman — Your child's tutor, in your language",
     ogDescription:
-      "1:1 sessions, 5 days a week. Free demo class with detailed assessment report. ₹3,000/month.",
+      "1:1 sessions, 5 days a week. Free demo class with detailed assessment report. ₹2,999/month.",
   },
   nav: {
     home: "Home",
@@ -20,7 +20,7 @@ export const en = {
     languageHi: "हिंदी",
   },
   hero: {
-    title: "Your child's own tutor — in your language, on WhatsApp.",
+    title: "Your child's personal tutor — in your language, on WhatsApp.",
     subtitle:
       "1:1 sessions, 5 days a week, with a highly trained subject expert, supercharged by AI — in the language your child is comfortable with. No app. No commute. Just results.",
     ctaPrimary: "Book Your Free Demo Class →",
@@ -29,7 +29,7 @@ export const en = {
       "Founded by IITians",
       "1st demo class free",
       "Detailed assessment report",
-      "₹3,000/month",
+      "₹2,999/month",
     ],
   },
   freeDemo: {
@@ -80,32 +80,27 @@ export const en = {
       {
         number: 1,
         title: "We match your child to the right tutor",
-        description:
-          "A highly trained subject expert matched to your child's subject, curriculum board, and learning style — supercharged by AI. Not a random assignment — a deliberate match.",
+        description: "By subject, board, and learning style.",
       },
       {
         number: 2,
         title: "Sessions run on Google Meet, 5 days a week",
-        description:
-          "One hour per subject per day. Your child asks every question they were afraid to ask in school. We record every session (with your consent).",
+        description: "1 hour per subject, daily — recorded with consent.",
       },
       {
         number: 3,
         title: "After every session, the tutor notes the gaps",
-        description:
-          "What concept did they struggle with? What explanation finally clicked? This builds a personalised knowledge map of your child.",
+        description: "Builds a personalised knowledge map.",
       },
       {
         number: 4,
         title: "Daily material arrives on WhatsApp",
-        description:
-          "Quizzes, walkthroughs, animations — all matched to your child's exact gaps, their board, and their learning style. Not generic homework. Targeted practice.",
+        description: "Targeted quizzes matched to their gaps.",
       },
       {
         number: 5,
         title: "You get a weekly parent report",
-        description:
-          "What your child mastered this week, what gaps remain, and what's coming next. All on WhatsApp. No portals to log into.",
+        description: "Mastery, gaps, and next steps every Sunday.",
       },
     ],
   },
@@ -215,7 +210,7 @@ export const en = {
         ["Parent progress reports", "❌", "❌", "✅ Weekly"],
         ["Scientifically grounded learning", "❌", "❌", "✅"],
         ["No app required", "N/A", "N/A", "✅ WhatsApp only"],
-        ["Price/month", "₹1,500–3,000", "₹2,000–4,000", "₹3,000"],
+        ["Price/month", "₹1,500–2,999", "₹2,000–4,000", "₹2,999"],
       ],
     },
   },
@@ -237,7 +232,7 @@ export const en = {
           "My son was too shy to ask questions in his coaching class. Now he asks everything in Tamil during his 1:1 sessions. His Science marks improved from 52 to 81 in one term.",
         name: "Lakshmi Venkatesh",
         city: "Chennai",
-        grade: "Class 9 parent",
+        grade: "Class 5 parent",
         initials: "LV",
       },
       {
@@ -256,7 +251,7 @@ export const en = {
       {
         question: "What grade levels do you cover?",
         answer:
-          "We cover Class 1 through Class 12 across all major subjects. Whether your child is in primary school or preparing for board exams, we match them with a specialist tutor for their grade and curriculum.",
+          "We cover Class 3 through Class 8 across all major subjects. We match your child with a specialist tutor for their grade and curriculum.",
       },
       {
         question: "How is this different from a regular tuition centre?",
@@ -314,7 +309,6 @@ export const en = {
   footer: {
     tagline: "Built by IITians. Designed for India.",
     quickLinks: "Quick links",
-    forTutors: "For Tutors",
     contact: "Contact",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
@@ -337,18 +331,12 @@ export const en = {
     childGrade: "Child's grade",
     selectGrade: "Select grade",
     gradeLabels: [
-      "Class 1",
-      "Class 2",
       "Class 3",
       "Class 4",
       "Class 5",
       "Class 6",
       "Class 7",
       "Class 8",
-      "Class 9",
-      "Class 10",
-      "Class 11",
-      "Class 12",
     ],
     preferredLanguage: "Preferred language",
     selectLanguage: "Select language",
@@ -585,19 +573,9 @@ export const en = {
     howItWorksLink: "See how it works →",
   },
   pricingPage: {
-    metaTitle: "Pricing — MyFeynman | ₹3,000/month",
+    metaTitle: "Pricing — MyFeynman | ₹2,999/month",
     metaDescription:
-      "Simple, transparent pricing. ₹3,000 per student per month. Free demo class with detailed assessment report. 1:1 sessions, daily WhatsApp material, weekly reports.",
-  },
-  forTutorsPage: {
-    metaTitle: "For Tutors — MyFeynman",
-    metaDescription:
-      "Join MyFeynman as a subject specialist tutor. Teach 1:1 sessions in your language, flexible hours, meaningful impact.",
-    title: "Teach with MyFeynman",
-    subtitle:
-      "We're building a network of subject specialists who teach in regional languages. If you're passionate about 1:1 teaching and fluent in a Indian language, we'd love to hear from you.",
-    cta: "Apply via WhatsApp →",
-    backHome: "← Back to homepage",
+      "Simple, transparent pricing. ₹2,999 per student per month. Free demo class with detailed assessment report. 1:1 sessions, daily WhatsApp material, weekly reports.",
   },
   privacyPage: {
     metaTitle: "Privacy Policy — MyFeynman",

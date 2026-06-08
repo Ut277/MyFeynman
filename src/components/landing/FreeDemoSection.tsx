@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { useLeadCapture } from "@/components/modal/LeadCaptureProvider";
 import { useTranslations } from "@/i18n/LocaleProvider";
+import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function FreeDemoSection() {
-  const { openModal } = useLeadCapture();
   const { t } = useTranslations();
 
   return (
@@ -40,7 +40,10 @@ export function FreeDemoSection() {
 
           <Button
             className="mt-10"
-            onClick={() => openModal("free_demo")}
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick()}
           >
             {t.freeDemo.cta}
           </Button>

@@ -17,7 +17,6 @@ export function Footer() {
     { href: localizedPath(locale, "/our-method"), label: t.nav.ourMethod },
     { href: localizedPath(locale, "/#classes"), label: t.nav.classes },
     { href: localizedPath(locale, "/pricing"), label: t.nav.pricing },
-    { href: localizedPath(locale, "/for-tutors"), label: t.footer.forTutors },
     { href: WHATSAPP_URL, label: t.footer.contact, external: true },
   ];
 
